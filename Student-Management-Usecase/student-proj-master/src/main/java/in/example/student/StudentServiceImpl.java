@@ -45,7 +45,7 @@ public class StudentServiceImpl implements StudentService {
 		List<Course> courses = new ArrayList<>();
 		
 		request.getCourses().forEach(cur -> {
-			Optional<Course> foundCourse = courseRepository.findById(cur.getId());
+			
 			
 			if(foundCourse.isPresent()) {
 				courses.add(foundCourse.get());
